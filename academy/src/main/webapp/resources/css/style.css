@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* --- reset ------------------------------------- */
+body, h1, h2, h3, h4, h5{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	padding: 0px;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+body{
+	/* color: #fff; */
+}
+html{
+	height: 100%;
+}
+
+
+/* --- 텍스트 ------------------------------------- */
+.hidden{
+	display: none;
+}
+.decoration-none{
+	text-decoration: none;
+}
+.decoration-underline{
+	text-decoration: underline;
+}
+/* --- 색상 / 배경 ------------------------------------- */
+.bg-white{
+	background: #fff;
+}
+
+.bg-gray{
+	background: #7f7f7f;
+}
+
+/* --- 레이아웃 ------------------------------------- */
+/* #header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	justify-content : 수평기준으로 앞이나 뒤(방향축 정렬)
+		align-content : 수직기준 정렬()
+	
+}
+	#header > h1{
+	}
+	#header > .main-menu{
+		margin-left: auto;
+	} */
+	
+.flex{
+	display: flex;
+}
+.flex.flex-row{
+	flex-direction: row;
+}
+.flex.flex-column{
+	flex-direction: column;
+}
+
+.flex-item-push{
+	margin-left: auto;
+}
+
+/* --- jagged-slider --------------------------------- */
+.height-expand{
+	height: 100%;
+}
+
+.slider-wing{
+	height: 100%;
+	display: flex;	
+}
+
+.wing-item{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 1px solid red;
+	flex: 1 0 auto;
+}
+
+/* --- 버튼 / 입력 컨트롤 ------------------------------------- */
+.btn{
+}
+
+.btn-hamburger{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -999px;
+	border: 0px;
+	padding: 0px;
+	background: url("/jaehwan/academy/resources/images/icon-set.png") no-repeat 0px 0px;
+}
+
+.btn-search{
+
+}
+
+.btn-primary{
+	
+}
+
+.btn-cancel{
+	
+}
+
+
+/* ---------------------------------------- */
+@media screen and (min-width: 600px){
+	.btn-md-hamburger{
+		width: 48px;
+		height: 48px;
+		background: url("/jaehwan/academy/resources/images/icon-set.png") no-repeat 0px -24px;
+	}
+	
+	.show-md-block{
+		display: block;
+	}
+}
+@media screen and (min-width: 1000px){
+	.btn-lg-hamburger{
+		width: 48px;
+		height: 48px;
+		background: url("/jaehwan/academy/resources/images/icon-set.png") no-repeat 0px -24px;
+	}
+	
+	.show-lg-block{
+		display: block;
+	}
+}
+
+
+

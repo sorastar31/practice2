@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="menu-app">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
+<script src="ex1.js"></script>
+</head>
+<body>
+    <section ng-controller="menu-controller">
+			<h1>메뉴 목록 {{hi}}</h1><!-- 원웨이바인딩 -->
+			<ul>
+				<li>
+					<input type="checkbox" name="menu-id" value="" /><span></span>
+					<input type="submit" name="action" value="수정" onclick="document.querySelector('.selected-menu-id').value = parentElement.firstElementChild.value;"/>
+					<input type="submit" name="action" value="삭제" onclick="document.querySelector('.selected-menu-id').value = parentElement.firstElementChild.value;"/>
+				</li>
+			</ul>
+			<fieldset> 
+				<legend>메뉴 입력 필드</legend>
+				<ul>
+					<li>
+						<label>메뉴명 : </label>
+						<input name="title" ng-model="title" /><!-- 투웨이바인딩 -->
+					</li>
+					<li>
+						<label>url : </label>
+						<input name="url" ng-model="title" />
+					</li>
+				</ul>
+			</fieldset>
+			<div>
+				<input type="hidden" name="selected-menu-id" class="selected-menu-id" value="${selectedMenu.id}" />
+				<input type="submit" name="action" value="일괄삭제" />
+				<input type="submit" name="action" value="저장" />
+				<input type="submit" name="action" value="추가" />
+			</div>
+		</section>
+</body>
+</html>
